@@ -15,7 +15,7 @@
   --fw-bold: 800;
 
   --mg-cards: 1em 0em;
-  --br-cards:.5em;
+  --br-cards: 0.5em;
 }
 
 /*
@@ -45,7 +45,7 @@ body {
     5. Improve text rendering
   */
 body {
-  line-height: 1.5;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -126,26 +126,26 @@ i {
   background-color: var(--clr-primary-blue);
   color: var(--clr-neutral-0);
 }
-.control-panel__all-read{
-    font-size: .87rem;
-    border: none;
-    background-color:inherit;
-    color: var(--clr-neutral-500);
+.control-panel__all-read {
+  font-size: 0.87rem;
+  border: none;
+  background-color: inherit;
+  color: var(--clr-neutral-500);
 }
+
 /* cards*/
 
 .notification-card {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   gap: 1em;
   margin: var(--mg-cards);
   padding: 1em;
   border-radius: var(--br-cards);
   color: var(--clr-neutral-700);
-  
 }
-.notification-card--color{
-    background-color: var(--clr-neutral-200);
+.notification-card--color {
+  background-color: var(--clr-neutral-200);
 }
 .notification-card__name {
   color: var(--clr-neutral-900);
@@ -156,16 +156,38 @@ i {
 }
 .notification-card__time {
   color: var(--clr-neutral-500);
-  font-size: .85rem;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
 }
 .notification-card__event--club {
   color: var(--clr-primary-blue);
 }
-.notification-card__message{
-    padding: .8em;
-    margin-top: .7em;
-    background-color: white;
-    color: var(--clr-neutral-700);
-    border: 1px solid var(--clr-neutral-200);
-    border-radius: var(--br-cards);
+.notification-card__message {
+  padding: 0.8em;
+  margin-top: 0.7em;
+  background-color: white;
+  color: var(--clr-neutral-700);
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: var(--br-cards);
+}
+.notification-card--img {
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+/*                hover                 */
+
+.control-panel__all-read:is(:hover, :focus),
+.notification-card__name:is(:hover, :focus) {
+  cursor: pointer;
+  color: var(--clr-primary-blue);
+}
+
+.notification-card__user-picture:is(:hover, :focus),
+.notification-card__message-pic:is(:hover, :focus) {
+  cursor: pointer;
+  scale: 1.1;
+}
+.notification-card__message:is(:hover, :focus) {
+  background-color: var(--clr-neutral-200);
+  cursor: pointer;
 }
