@@ -135,15 +135,13 @@ i {
 /*      media */
 @media (min-width: 600px) {
   body {
-    display: grid;
-    justify-content: center;
     background-color: var(--clr-neutral-100);
   }
   .control-panel {
     max-width: 600px;
     padding: 1.5rem 2em;
-    margin: 2em 0 4em;
-    border-radius: .8rem;
+    margin: 2em auto 4em;
+    border-radius: 0.8rem;
     box-shadow: 0px 0px 30px var(--clr-neutral-300);
     background-color: var(--clr-neutral-0);
   }
