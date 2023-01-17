@@ -130,7 +130,7 @@ i {
   font-size: 0.87rem;
   border: none;
   background-color: inherit;
-  color: var(--clr-neutral-500);
+  color: var(--clr-neutral-700);
 }
 /*      media */
 @media (min-width: 600px) {
